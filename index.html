@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/script.js"></script>
+
+    <title>Finance</title>
+  </head>
+  <body>
+    <!-- 
+        === Main Div -->
+    <section class="master">
+      <!-- 
+          === FORNULAIRE -->
+      <section class="formulaire">
+        <form id="form01" action="/data.php" method="post">
+          <!-- 
+            input income -->
+          <div class="input income--rent">
+            <label for="income">Income: </label>
+            <input
+              id="input-income"
+              type="number"
+              name="income"
+              placeholder="Enter your income"
+            />
+          </div>
+          <!-- 
+            input outcome rent -->
+          <div class="input outcome--rent">
+            <label for="rent">Rent </label>
+            <input
+              id="input-rent"
+              type="number"
+              name="rent"
+              placeholder="rentEnter your rent"
+            />
+          </div>
+          <!-- 
+            input outcome credit -->
+          <div class="input outcome--credit">
+            <label for="credit">Credit </label>
+            <input
+              id="input-credit"
+              type="number"
+              name="credit"
+              placeholder="Enter your credit"
+            />
+          </div>
+          <!-- 
+            input outcome vitals -->
+          <div class="input outcome--vitals">
+            <label for="vitals">Vitals </label>
+            <input
+              id="input-vitals"
+              type="number"
+              name="vitals"
+              placeholder="Enter your vitals"
+            />
+          </div>
+          <!-- 
+            input outcome moneyleft-->
+          <div class="input outcome--left">
+            <label name="spending-ratio" for="spending-ratio">
+              How much do you wanna spend?
+            </label>
+            <span>
+              <p>0%</p>
+              <input
+                type="range"
+                name="spending-ratio"
+                id="spending-ratio"
+                min="0"
+                max="100"
+              />
+              <p>100%</p></span
+            >
+          </div>
+          <button onclick="calculateFinance()">Send</button>
+        </form>
+      </section>
+      <!-- 
+          === RESULT -->
+      <section class="result">
+        <table>
+          <thead>
+            <tr>
+              <td>Nature</td>
+              <td>Amount</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong> Total Income</strong></td>
+              <td id="income"></td>
+            </tr>
+            <tr>
+              <td>Rent</td>
+              <td id="rent">-</td>
+            </tr>
+            <tr>
+              <td>Credit</td>
+              <td id="credit">-</td>
+            </tr>
+            <tr>
+              <td>Vitals</td>
+              <td id="vitals">-</td>
+            </tr>
+          </tbody>
+          <head>
+            <tr>
+              <td><strong>Total Outcome</strong></td>
+              <td id="total">-</td>
+            </tr>
+            <tr>
+              <td><strong> Money Left</strong></td>
+              <td id="money-left">-</td>
+            </tr>
+          </head>
+          <tbody>
+            <tr>
+              <td>Spending</td>
+              <td id="spending">-</td>
+              <td id="percent-spend">-</td>
+            </tr>
+            <tr>
+              <td>Invest</td>
+              <td id="invest">-</td>
+              <td id="percent-invest">-</td>
+            </tr>
+            <tr>
+              <td>Saves</td>
+              <td id="saves">-</td>
+              <td id="percent-save">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </body>
+</html>
